@@ -1,0 +1,281 @@
+:root{
+    --Red: hsl(0, 100%, 74%) ;
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --DarkBlue: hsl(249, 10%, 26%) ;
+    --GrayishBlue: hsl(246, 25%, 77%);
+    --default:16px;
+    --medium:28px;
+    --large:32px;
+    --xlarge:48px;
+
+    @media screen  and (min-width:1024px) {
+        --medium:32px;
+        --large:48;
+        --xlarge:64px;
+        
+    }
+}
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+/* 1rem = 16px */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--default);
+    background: url('images/bg-intro-desktop.png');
+    background-color: var(--Red);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.body{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 1400px;
+    height: 800px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem; 
+}
+
+.left-txt{
+    color: white;
+    padding-left: 8.5rem;
+    flex: 0 0 45%;
+}
+
+
+h1{
+    font-weight: 700;
+    font-size: var(--large);
+    margin-bottom: 20px;
+}
+p{
+    
+    font-weight: 400;
+    font-size: 14px;
+   line-height: 1.8;
+}
+
+.right-form{
+    flex: 0 0 40%;
+    height: 600px;
+   
+    
+}
+
+.btn{
+    max-width: 100%;
+    padding: 16px;
+    color: white;
+    background-color: var(--Blue);
+    border: none;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: var(--default);
+    margin-bottom: 30px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 8px 10px rgba(black 0.3);
+    display: block;
+}
+.btn span{
+    font-weight: 700;
+    display: inline-block;
+}
+
+.form-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(black 0.3);
+   
+}
+
+div{
+    flex: 1;
+    width: 100%;
+    display: block;
+    padding: 0.6rem 1rem;
+    position: relative;
+}
+/* &:first-of-type{
+    margin-top: 20px;
+
+}
+&:last-of-type{
+    margin-bottom: ;
+
+} */
+.error-icon{
+    position: absolute;
+    right: 8%;
+    top: 28%;
+}
+.error {
+    font-size: 12px;
+    color: var(--Red);
+    float: right;
+}
+.error, .error-icon{
+    display: none;
+}
+
+div.error .error,
+div.error .error-icon{
+    display: contents;
+
+}
+
+div.error input{
+    border: 2px solid var(--Red);
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-right: 10px;
+
+}
+input{
+    display: block;
+    padding: 1.2rem 1.8rem;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--GrayishBlue, 10%);
+    margin: 10px 0 0 10px;
+    font-weight: bolder;
+    color: var(--DarkBlue);
+
+}
+input:hover{
+    border: 2px solid var(--Blue);
+
+}
+
+
+
+button{
+    /* width: 120%; */
+    display: block;
+    margin-bottom: 1rem;
+    padding: 1rem  1.2rem;
+    color: white;
+    background-color: var(--Green);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: var(--default);
+    letter-spacing: 2px;
+    width: 100%;
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 3px outset var(--Green);
+    border-right: 1px solid var(--Green) ;
+    border-left: 1px solid var(--Green);
+    border-top: 1px solid var(--Green);
+}
+.form-card p {
+    font-size: 12px;
+    color: var(--GrayishBlue);
+    padding-bottom: 2.5rem;
+}
+.terms{
+    color: var(--Red);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+    .right-form{
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .left-txt{
+        flex: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+        margin-bottom: 3rem;
+    }
+
+    .btn{
+        max-width: 100% !important;
+        text-align: center;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+
+    }
+
+    .form-card{
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        
+
+    }
+
+    button{
+        width: 90% !important;
+        font-size: 12px !important;
+    }
+
+    .form-card p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: center;
+    }
+
+    body{
+        flex: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+        margin-bottom: 3rem;
+    }
+    h1,p{
+        text-align: center;
+    }
+   .body{
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+
+   }
+   
+
+
+}
